@@ -67,7 +67,7 @@ DRenderer.prototype = {
 
 function THREEPointerLockControls(camera){
 	THREE.DeviceOrientationControls.call( this , camera );
-	this.moves = new Moves(15,15,this.getObject());
+	this.moves = new Moves(15,15,this.object);
 	
 	if(String(document.ontouchstart) === 'undefined'){
 		//pc
@@ -79,7 +79,7 @@ function THREEPointerLockControls(camera){
 		this.moves.mobilePhone();
 	}
 	
-	scene.add( this.getObject() );
+	scene.add( this.object );
 }
 
 THREEPointerLockControls.prototype = {
