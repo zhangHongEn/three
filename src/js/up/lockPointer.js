@@ -173,7 +173,7 @@ Moves.prototype = {
 			startTouche = null;
 			onToucheStart = function(event){
 				event.preventDefault(event);
-				var touche = event.touches[1];
+				var touche = event.touches[0];
 				if(touche) {
 					startTouche = touche;
 					DRenderer.newStart.x = touche.pageX;
@@ -183,7 +183,7 @@ Moves.prototype = {
 			},
 			onTouchMove = function(event){
 				event.preventDefault(event);
-				var touche = event.touches[1];
+				var touche = event.touches[0];
 				if(!touche) return;
 				
 				var vector = {
