@@ -28,6 +28,7 @@
 		<script src="js/libs/stats.min.js"></script>
 		<script src="js/libs/tween.min.js"></script>
 		<script src="js/up/PointerLockControls.js"></script>
+		<script src="js/up/DeviceOrientationControls.js"></script>
 		<script src="js/up/lockPointer.js"></script>
 		<!--script src="js/up/physi.js"></script-->
 		<script src="js/up/particleEngine.js"></script>
@@ -218,7 +219,7 @@
 			
 			//初始化控制器
 			function initControls(){
-				controls = new THREEPointerLockControls(camera);
+				controls = new THREE.DeviceOrientationControls(camera);
 			}
 			
 			//初始化物体
