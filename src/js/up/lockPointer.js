@@ -1,4 +1,4 @@
-﻿function DRenderer(){
+a﻿function DRenderer(){
 	this.canvas = document.createElement('canvas');
 	this.ctx = this.canvas.getContext('2d');
 	
@@ -66,7 +66,7 @@ DRenderer.prototype = {
 };
 
 function THREEPointerLockControls(camera){
-	THREE.PointerLockControls.call( this , camera );
+	THREE.DeviceOrientationControls.call( this , camera );
 	this.moves = new Moves(15,15,this.getObject());
 	
 	if(String(document.ontouchstart) === 'undefined'){
