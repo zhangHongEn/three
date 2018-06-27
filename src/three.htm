@@ -430,7 +430,7 @@
 				requestAnimationFrame(arguments.callee);
 				var dt = clock.getDelta();
 				
-				controls.moves.update(dt);
+// 				controls.moves.update(dt);
 				TWEEN.update();
 				engines.rendererUpdate(dt * 0.5);
 				DRenderer.renderer();
@@ -470,6 +470,6 @@
 		}
 		</script>
 	</head>
-	<body ontouchmove="event.preventDefault();console.log(1)" onload="app();">
+	<body ontouchmove="event.preventDefault();" onload="app();">
 	</body>
 </html>
