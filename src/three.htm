@@ -181,6 +181,7 @@
 				
 				DRenderer = new DRenderer();
 				document.body.appendChild(DRenderer.canvas);
+				renderer.domElement.addEventListener('touchmove', function(e){e.preventDefault()})
 			}
 			
 			//初始化场景
