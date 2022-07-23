@@ -167,8 +167,19 @@
 				initObjects();
 				initRenderer();
 				initControls();
-				initStats();
-				new Audio('music/a little love.mp3').play();
+				// initStats();
+				document.body.addEventListener("click", () => {
+					if (window.threeFirstClick) return
+					window.threeFirstClick = true
+					var au = new Audio('music/a little love.mp3')
+					confirm("是否播放背景音乐") && au.play();
+				})
+				document.body.addEventListener("touchstart", () => {
+					if (window.threeFirstClick) return
+					window.threeFirstClick = true
+					var au = new Audio('music/a little love.mp3')
+					confirm("是否播放背景音乐") && au.play();
+				})
 			}
 			
 			//初始化渲染器
@@ -464,6 +475,6 @@
 		}
 		</script>
 	</head>
-	<body onload="app();">
+	<body ontouchmove="event.preventDefault();" onload="app();">
 	</body>
 </html>
