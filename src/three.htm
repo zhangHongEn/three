@@ -311,9 +311,9 @@
 							ry : ry
 						};
 					var tween = new TWEEN.Tween( oldObj )
-							.to( targetObj, 5000*(length+1) )
+							.to( targetObj, 1000*(length+1) )
 							.easing( TWEEN.Easing.Circular.InOut)
-							.delay(2000)
+							.delay(3000)
 							.start()
 							.onUpdate(function(){
 								mesh.position.set(oldObj.x,oldObj.y,oldObj.z);
@@ -322,8 +322,10 @@
 					if(length == pics.length-1){
 						tween.onComplete(function(){
 							engines.pop().destroy();
-							startFirework();
 						});
+					}
+					if (length === 1) {
+						startFirework();
 					}
 					scene.add(mesh);
 				}
